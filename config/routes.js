@@ -23,6 +23,7 @@ module.exports.routes = {
 
   'POST /user/auth/login':              { action: 'user/auth/login' },
   'POST /user/auth/signup':              { action: 'user/auth/signup' },
+  'POST /user/auth/forgetPassword':              { action: 'user/auth/forgetPassword' },
 
 
 

@@ -46,7 +46,9 @@ module.exports = {
 
     // If there was no matching user, respond thru the "badCombo" exit.
     if(!userRecord) {
-      throw 'badCombo';
+      return {
+        success: false
+      }
     }
 
     // If the password doesn't match, then also exit thru "badCombo".
@@ -55,7 +57,12 @@ module.exports = {
 
     this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge;
     this.req.session.user = userRecord;
-
+    
+    return { 
+      success: true,
+      user: newUserRecord
+    };
+  
   }
 
 };
