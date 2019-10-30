@@ -39,6 +39,10 @@ module.exports = {
       type: 'number'
     },
 
+    isPaid: {
+      type: 'boolean'
+    },
+    
     isActive: {
       type: 'boolean'
     },
