@@ -36,7 +36,7 @@ module.exports = {
     const UserLogged = await User.findOne({ emailAddress: userEmailAddress });
     if(!UserLogged) throw 'userNotExists';
 
-    let startsAtDate = moment(startsAtDate, 'DD/MM/YYYY');
+    startsAtDate = moment(startsAtDate, 'DD/MM/YYYY');
     let allExpenses = [];
 
     for(let i = 1; i < 13; i++) {
