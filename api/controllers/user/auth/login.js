@@ -52,7 +52,7 @@ module.exports = {
     }
 
     // If the password doesn't match, then also exit thru "badCombo".
-    await sails.helpers.passwords.checkPassword(inputs.password, userRecord.password)
+    await sails.helpers.passwords.checkPassword(inputs.password, userRecord.password)   
     .intercept('incorrect', 'badCombo');
 
     this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge;
@@ -60,7 +60,7 @@ module.exports = {
     
     return { 
       success: true,
-      user: newUserRecord
+      user: userRecord
     };
   
   }

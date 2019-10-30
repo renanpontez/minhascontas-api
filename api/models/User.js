@@ -46,11 +46,10 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
     expenses: { 
-      collection: 'ExpenseMonth', 
+      collection: 'Expense', 
       description: 'All expenses of that user.',
       via: 'userId'
     },
-
   },
 
 };

@@ -20,6 +20,11 @@ module.exports = {
       type: 'number',
       description: 'The day of each month that the expense needs to be paid'
     },
+    
+    payDate: {
+      type: 'number',
+      description: 'The date (dd/mm/yyyy) of each month'
+    },
 
     value: {
       type: 'number'
@@ -37,7 +42,7 @@ module.exports = {
     isActive: {
       type: 'boolean'
     },
-
+    
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -47,9 +52,9 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    expenseMonth: { 
-      collection: 'ExpenseMonth', 
-      via: 'expenseId'
+    userId: { 
+      model: 'User', 
+      description: 'The user owner of this expense.' 
     },
     
   },

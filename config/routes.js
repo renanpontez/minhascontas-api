@@ -21,11 +21,19 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  //AUTH
   'POST /user/auth/login':              { action: 'user/auth/login' },
   'POST /user/auth/signup':              { action: 'user/auth/signup' },
-  'POST /user/auth/forgetPassword':              { action: 'user/auth/forgetPassword' },
+  'POST /user/auth/recover-password':              { action: 'user/auth/recoverPassword' },
 
+  //EXPENSES
+  'POST /expense':              { action: 'expense/create' },
+  'PUT /expense/:id':              { action: 'expense/update' },
+  'DELETE /expense/:id':              { action: 'expense/delete' },
+  'GET /expense/:id':              { action: 'expense/read' },
+  'POST /expense/list':              { action: 'expense/list' },
 
+  
 
 
   /***************************************************************************
